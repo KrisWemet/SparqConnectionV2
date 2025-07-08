@@ -1,0 +1,42 @@
+{
+  "testSuites": {
+    "development": {
+      "servers": ["supabase", "openai", "puppeteer"],
+      "tests": [
+        "connection_test",
+        "basic_functionality", 
+        "error_handling"
+      ]
+    },
+    "relationship_features": {
+      "servers": ["context7", "supabase", "openai"],
+      "tests": [
+        "couple_context_tracking",
+        "ai_question_generation",
+        "crisis_detection"
+      ]
+    },
+    "business_features": {
+      "servers": ["stripe", "monitoring"],
+      "tests": [
+        "subscription_creation",
+        "payment_processing",
+        "error_monitoring"
+      ]
+    }
+  },
+  "sparqConnectionTests": {
+    "criticalPaths": [
+      "auth_flow",
+      "couple_onboarding", 
+      "daily_questions",
+      "crisis_intervention",
+      "premium_conversion"
+    ],
+    "performanceTargets": {
+      "pageLoad": 2000,
+      "aiResponse": 1200,
+      "databaseQuery": 100
+    }
+  }
+}

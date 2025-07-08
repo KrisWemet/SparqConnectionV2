@@ -1,0 +1,157 @@
+{
+  "summary": {
+    "totalTests": 1,
+    "passed": 1,
+    "failed": 0,
+    "duration": 62957,
+    "timestamp": "2025-07-07T14:36:26.133Z"
+  },
+  "testResults": [
+    {
+      "testPath": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/e2e/evidence-based-demo.test.js",
+      "testName": "Complete Evidence-Based User Journey Analysis",
+      "duration": 62866,
+      "status": "passed",
+      "numPassingTests": 1,
+      "numFailingTests": 0,
+      "failures": [],
+      "screenshots": [],
+      "logs": [],
+      "stateCaptures": [],
+      "timestamp": "2025-07-07T14:36:26.131Z"
+    }
+  ],
+  "environment": {
+    "nodeVersion": "v23.3.0",
+    "platform": "darwin",
+    "ci": false,
+    "baseUrl": "http://localhost:3000"
+  },
+  "evidence": {
+    "screenshots": [
+      {
+        "filename": "01-landing-page.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/01-landing-page.png",
+        "size": 313855,
+        "created": "2025-07-07T14:33:33.187Z"
+      },
+      {
+        "filename": "02-auth-page.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/02-auth-page.png",
+        "size": 134096,
+        "created": "2025-07-07T14:33:38.949Z"
+      },
+      {
+        "filename": "08-validation-errors.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/08-validation-errors.png",
+        "size": 140499,
+        "created": "2025-07-07T14:33:47.652Z"
+      },
+      {
+        "filename": "09-invalid-email.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/09-invalid-email.png",
+        "size": 138872,
+        "created": "2025-07-07T14:33:55.182Z"
+      },
+      {
+        "filename": "10-keyboard-navigation.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/10-keyboard-navigation.png",
+        "size": 134145,
+        "created": "2025-07-07T14:34:00.075Z"
+      },
+      {
+        "filename": "auth-page.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/auth-page.png",
+        "size": 134096,
+        "created": "2025-07-07T14:31:47.582Z"
+      },
+      {
+        "filename": "evidence-content-analysis-1751898933981.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-content-analysis-1751898933981.png",
+        "size": 313624,
+        "created": "2025-07-07T14:35:34.545Z"
+      },
+      {
+        "filename": "evidence-desktop-responsive-test-1751898982574.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-desktop-responsive-test-1751898982574.png",
+        "size": 139180,
+        "created": "2025-07-07T14:36:22.981Z"
+      },
+      {
+        "filename": "evidence-error-handling-test-1751898976192.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-error-handling-test-1751898976192.png",
+        "size": 139180,
+        "created": "2025-07-07T14:36:16.629Z"
+      },
+      {
+        "filename": "evidence-final-validation-1751898984625.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-final-validation-1751898984625.png",
+        "size": 139180,
+        "created": "2025-07-07T14:36:25.048Z"
+      },
+      {
+        "filename": "evidence-form-interaction-analysis-1751898970637.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-form-interaction-analysis-1751898970637.png",
+        "size": 132341,
+        "created": "2025-07-07T14:36:11.078Z"
+      },
+      {
+        "filename": "evidence-landing-page-performance-1751898932584.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-landing-page-performance-1751898932584.png",
+        "size": 313855,
+        "created": "2025-07-07T14:35:33.337Z"
+      },
+      {
+        "filename": "evidence-mobile-responsive-test-1751898978455.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-mobile-responsive-test-1751898978455.png",
+        "size": 67229,
+        "created": "2025-07-07T14:36:18.778Z"
+      },
+      {
+        "filename": "evidence-navigation-to-auth-1751898941385.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-navigation-to-auth-1751898941385.png",
+        "size": 134096,
+        "created": "2025-07-07T14:35:41.866Z"
+      },
+      {
+        "filename": "evidence-performance-deep-dive-1751898983593.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-performance-deep-dive-1751898983593.png",
+        "size": 139180,
+        "created": "2025-07-07T14:36:24.009Z"
+      },
+      {
+        "filename": "evidence-tablet-responsive-test-1751898980402.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/evidence-tablet-responsive-test-1751898980402.png",
+        "size": 130858,
+        "created": "2025-07-07T14:36:20.848Z"
+      },
+      {
+        "filename": "form-interaction.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/form-interaction.png",
+        "size": 133448,
+        "created": "2025-07-07T14:30:51.786Z"
+      },
+      {
+        "filename": "landing-page.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/landing-page.png",
+        "size": 313855,
+        "created": "2025-07-07T14:31:40.584Z"
+      },
+      {
+        "filename": "mobile-view.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/mobile-view.png",
+        "size": 66420,
+        "created": "2025-07-07T14:31:55.854Z"
+      },
+      {
+        "filename": "tablet-view.png",
+        "path": "/Users/chrisouimet/Sparq Connection/sparq-connection/tests/screenshots/tablet-view.png",
+        "size": 126831,
+        "created": "2025-07-07T14:31:57.239Z"
+      }
+    ],
+    "logs": [],
+    "stateCaptures": [],
+    "visualDiffs": []
+  }
+}

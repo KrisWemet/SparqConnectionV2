@@ -1,0 +1,21 @@
+# MCP Environment-Specific Files
+config.development.json
+config.testing.json
+config.staging.json
+config.production.json
+
+# Logs
+*.log
+mcp-logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# API Keys (should be in environment variables)
+api-keys.json
+secrets.json
+
+# Test outputs
+test-results/
+screenshots/

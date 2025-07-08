@@ -1,0 +1,145 @@
+{
+  "relationshipStages": {
+    "newCouple": {
+      "description": "Just connected, no history",
+      "daysConnected": 0,
+      "questionsAnswered": 0,
+      "healthScore": null,
+      "currentStreak": 0,
+      "state": "onboarding"
+    },
+    "earlyCouple": {
+      "description": "Connected for a week, building habits",
+      "daysConnected": 7,
+      "questionsAnswered": 5,
+      "healthScore": 65,
+      "currentStreak": 3,
+      "state": "building"
+    },
+    "establishedCouple": {
+      "description": "Strong routine, good engagement",
+      "daysConnected": 90,
+      "questionsAnswered": 75,
+      "healthScore": 88,
+      "currentStreak": 21,
+      "state": "thriving"
+    },
+    "strugglingCouple": {
+      "description": "Inconsistent engagement, challenges",
+      "daysConnected": 45,
+      "questionsAnswered": 15,
+      "healthScore": 45,
+      "currentStreak": 0,
+      "state": "struggling"
+    }
+  },
+  "attachmentCombinations": [
+    {
+      "partner1": "secure",
+      "partner2": "secure",
+      "compatibility": "high",
+      "expectedChallenges": [],
+      "expectedStrengths": ["communication", "conflict-resolution", "intimacy"]
+    },
+    {
+      "partner1": "secure", 
+      "partner2": "anxious",
+      "compatibility": "medium-high",
+      "expectedChallenges": ["reassurance-needs"],
+      "expectedStrengths": ["stability", "growth-potential"]
+    },
+    {
+      "partner1": "anxious",
+      "partner2": "avoidant",
+      "compatibility": "low",
+      "expectedChallenges": ["pursuit-distance", "emotional-regulation"],
+      "expectedStrengths": ["balance-potential", "growth-opportunity"]
+    },
+    {
+      "partner1": "avoidant",
+      "partner2": "avoidant", 
+      "compatibility": "medium",
+      "expectedChallenges": ["emotional-intimacy", "vulnerability"],
+      "expectedStrengths": ["independence", "respect-for-space"]
+    }
+  ],
+  "dailyQuestionScenarios": {
+    "firstQuestion": {
+      "description": "Couple's first shared question",
+      "category": "values",
+      "difficulty": 1,
+      "expectedBehavior": "both-answer-enthusiastically",
+      "timeToComplete": "2-5 minutes"
+    },
+    "weeklyQuestion": {
+      "description": "Regular weekly engagement",
+      "category": "memories",
+      "difficulty": 3,
+      "expectedBehavior": "consistent-engagement", 
+      "timeToComplete": "3-7 minutes"
+    },
+    "deepQuestion": {
+      "description": "Challenging emotional question",
+      "category": "intimacy",
+      "difficulty": 5,
+      "expectedBehavior": "thoughtful-careful-responses",
+      "timeToComplete": "5-15 minutes"
+    },
+    "conflictQuestion": {
+      "description": "Question about handling disagreements",
+      "category": "conflict",
+      "difficulty": 4,
+      "expectedBehavior": "requires-emotional-safety",
+      "timeToComplete": "7-20 minutes"
+    }
+  },
+  "crisisScenarios": [
+    {
+      "type": "relationship-crisis",
+      "triggerWords": ["ending", "breaking up", "can't do this"],
+      "severity": "medium",
+      "expectedResponse": "relationship-resources",
+      "timeframe": "immediate"
+    },
+    {
+      "type": "mental-health-crisis",
+      "triggerWords": ["suicidal", "hurt myself", "no point"],
+      "severity": "critical",
+      "expectedResponse": "crisis-hotline", 
+      "timeframe": "immediate"
+    },
+    {
+      "type": "domestic-violence",
+      "triggerWords": ["hitting me", "afraid of", "violence"],
+      "severity": "critical",
+      "expectedResponse": "safety-resources",
+      "timeframe": "immediate"
+    }
+  ],
+  "stateTransitions": {
+    "single-to-invited": {
+      "from": "single-user",
+      "to": "pending-couple",
+      "trigger": "invitation-sent",
+      "expectedState": "waiting-for-partner"
+    },
+    "pending-to-connected": {
+      "from": "pending-couple",
+      "to": "active-couple", 
+      "trigger": "invitation-accepted",
+      "expectedState": "couple-onboarding"
+    },
+    "connected-to-active": {
+      "from": "active-couple",
+      "to": "engaged-couple",
+      "trigger": "first-question-answered",
+      "expectedState": "daily-routine"
+    },
+    "active-to-struggling": {
+      "from": "engaged-couple",
+      "to": "struggling-couple",
+      "trigger": "streak-broken-multiple-times",
+      "expectedState": "re-engagement-needed"
+    }
+  }
+}

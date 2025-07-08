@@ -1,0 +1,173 @@
+{
+  "mcpServers": {
+    "postgresql": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "--database-url",
+        "${DATABASE_URL}"
+      ],
+      "env": {
+        "DATABASE_URL": "${DATABASE_URL}"
+      },
+      "description": "PostgreSQL MCP server for advanced database operations and schema management",
+      "capabilities": [
+        "database_queries",
+        "schema_management",
+        "relationship_data_analysis",
+        "couple_data_isolation"
+      ],
+      "environments": ["development", "testing", "staging", "production"]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "description": "Sequential Thinking MCP server for enhanced AI reasoning and relationship guidance",
+      "capabilities": [
+        "enhanced_reasoning",
+        "crisis_assessment",
+        "relationship_guidance",
+        "psychology_analysis"
+      ],
+      "environments": ["development", "testing", "staging", "production"]
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "puppeteer-mcp-server"
+      ],
+      "description": "Puppeteer MCP server for automated testing of critical user journeys",
+      "capabilities": [
+        "end_to_end_testing",
+        "user_journey_automation",
+        "crisis_intervention_testing",
+        "pwa_functionality_testing",
+        "responsive_design_validation",
+        "performance_testing"
+      ],
+      "environments": ["development", "testing", "staging"],
+      "testScenarios": {
+        "auth_flow": {
+          "description": "Authentication workflow testing",
+          "steps": ["signup", "login", "logout", "password_reset"]
+        },
+        "couple_onboarding": {
+          "description": "Partner invitation and pairing flow",
+          "steps": ["create_invitation", "send_invitation", "accept_invitation", "couple_formation"]
+        },
+        "daily_questions": {
+          "description": "Question generation and response flow",
+          "steps": ["generate_question", "display_question", "submit_response", "partner_sync"]
+        },
+        "crisis_intervention": {
+          "description": "Crisis detection and intervention testing",
+          "steps": ["trigger_crisis_keywords", "ai_analysis", "intervention_modal", "resource_display"]
+        },
+        "psychology_assessments": {
+          "description": "Psychology assessment completion",
+          "steps": ["start_assessment", "answer_questions", "generate_profile", "couple_matching"]
+        }
+      }
+    },
+    "google-maps": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-google-maps",
+        "--api-key",
+        "${GOOGLE_MAPS_API_KEY}"
+      ],
+      "env": {
+        "GOOGLE_MAPS_API_KEY": "${GOOGLE_MAPS_API_KEY}"
+      },
+      "description": "Google Maps MCP server for location-based crisis resources and therapist finder",
+      "capabilities": [
+        "location_services",
+        "crisis_resource_finder",
+        "therapist_locator",
+        "emergency_services_finder"
+      ],
+      "environments": ["staging", "production"],
+      "useCase": {
+        "crisis_intervention": "Find nearby crisis counseling centers, mental health facilities, and emergency services",
+        "therapist_finder": "Locate relationship counselors and therapy providers based on user location",
+        "support_resources": "Find local support groups and mental health resources"
+      }
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search",
+        "--api-key",
+        "${BRAVE_SEARCH_API_KEY}"
+      ],
+      "env": {
+        "BRAVE_SEARCH_API_KEY": "${BRAVE_SEARCH_API_KEY}"
+      },
+      "description": "Brave Search MCP server for finding relationship experts and therapy resources",
+      "capabilities": [
+        "web_search",
+        "expert_finder",
+        "resource_discovery",
+        "content_research"
+      ],
+      "environments": ["staging", "production"],
+      "useCase": {
+        "expert_research": "Find relationship experts, psychology researchers, and therapy methodologies",
+        "resource_discovery": "Discover helpful articles, studies, and resources for couples",
+        "crisis_resources": "Search for crisis intervention resources and emergency contacts"
+      }
+    }
+  },
+  "environmentConfig": {
+    "development": {
+      "enabledServers": ["postgresql", "sequential-thinking", "puppeteer"],
+      "logLevel": "debug",
+      "testMode": true
+    },
+    "testing": {
+      "enabledServers": ["postgresql", "sequential-thinking", "puppeteer"],
+      "logLevel": "info",
+      "testMode": true
+    },
+    "staging": {
+      "enabledServers": ["postgresql", "sequential-thinking", "puppeteer", "google-maps", "brave-search"],
+      "logLevel": "info",
+      "testMode": false
+    },
+    "production": {
+      "enabledServers": ["postgresql", "sequential-thinking", "google-maps", "brave-search"],
+      "logLevel": "warn",
+      "testMode": false,
+      "security": {
+        "restrictPuppeteer": true,
+        "reason": "Security policy - no browser automation in production"
+      }
+    }
+  },
+  "sparqConnection": {
+    "project": "Sparq Connection - AI-Powered Relationship Intelligence Platform",
+    "focus": "couples_therapy_and_relationship_enhancement",
+    "criticalPaths": [
+      "user_authentication",
+      "partner_invitation_flow",
+      "crisis_detection_system",
+      "psychology_assessment_completion",
+      "daily_question_interaction",
+      "real_time_synchronization",
+      "data_privacy_and_encryption"
+    ],
+    "safetyFirst": {
+      "crisisDetection": "All user content must pass through crisis detection before processing",
+      "dataPrivacy": "Couple data must be isolated using Row-Level Security policies",
+      "encryption": "Private reflections must be encrypted using crypto-js",
+      "emergencyProtocol": "Crisis events trigger immediate intervention with local resources"
+    }
+  }
+}

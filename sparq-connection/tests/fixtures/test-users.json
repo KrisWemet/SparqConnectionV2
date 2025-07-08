@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": "test-user-1",
+      "email": "alice@sparqtest.com",
+      "password": "TestPassword123!",
+      "displayName": "Alice Cooper",
+      "attachmentStyle": "secure",
+      "role": "primary"
+    },
+    {
+      "id": "test-user-2", 
+      "email": "bob@sparqtest.com",
+      "password": "TestPassword123!",
+      "displayName": "Bob Wilson",
+      "attachmentStyle": "anxious",
+      "role": "partner"
+    },
+    {
+      "id": "test-user-3",
+      "email": "charlie@sparqtest.com", 
+      "password": "TestPassword123!",
+      "displayName": "Charlie Brown",
+      "attachmentStyle": "avoidant",
+      "role": "single"
+    },
+    {
+      "id": "test-user-4",
+      "email": "diana@sparqtest.com",
+      "password": "TestPassword123!",
+      "displayName": "Diana Prince",
+      "attachmentStyle": "disorganized",
+      "role": "single"
+    }
+  ],
+  "couples": [
+    {
+      "id": "test-couple-1",
+      "partner1_id": "test-user-1",
+      "partner2_id": "test-user-2",
+      "relationship_status": "dating",
+      "health_score": 85,
+      "current_streak": 7,
+      "longest_streak": 21,
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  ],
+  "invitations": [
+    {
+      "id": "test-invite-1",
+      "inviter_id": "test-user-3",
+      "invite_code": "SPARQ123",
+      "status": "pending",
+      "expires_at": "2025-12-31T23:59:59Z"
+    },
+    {
+      "id": "test-invite-2",
+      "inviter_id": "test-user-4", 
+      "invite_code": "EXPIRED",
+      "status": "expired",
+      "expires_at": "2024-01-01T00:00:00Z"
+    }
+  ],
+  "testScenarios": {
+    "newUserSignup": {
+      "description": "Brand new user signs up and creates account",
+      "user": null,
+      "expectedFlow": ["landing", "auth", "signup", "verification", "dashboard", "invite"]
+    },
+    "existingUserLogin": {
+      "description": "Returning user logs in",
+      "user": "test-user-1",
+      "expectedFlow": ["landing", "auth", "signin", "dashboard"]
+    },
+    "coupleReconnection": {
+      "description": "Both partners of existing couple log in",
+      "users": ["test-user-1", "test-user-2"],
+      "expectedFlow": ["auth", "signin", "dashboard", "couple-view"]
+    },
+    "invitationAcceptance": {
+      "description": "User accepts partner invitation",
+      "inviter": "test-user-3",
+      "invitee": "test-user-4",
+      "invitation": "SPARQ123",
+      "expectedFlow": ["invite-link", "auth", "signup", "accept", "couple-creation", "dashboard"]
+    },
+    "expiredInvitation": {
+      "description": "User tries to accept expired invitation",
+      "invitation": "EXPIRED",
+      "expectedFlow": ["invite-link", "error-page"]
+    }
+  }
+}

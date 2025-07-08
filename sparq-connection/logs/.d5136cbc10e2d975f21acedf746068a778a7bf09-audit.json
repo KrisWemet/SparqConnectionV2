@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/chrisouimet/Sparq Connection/sparq-connection/logs/.d5136cbc10e2d975f21acedf746068a778a7bf09-audit.json",
+    "files": [
+        {
+            "date": 1751946997431,
+            "name": "/Users/chrisouimet/Sparq Connection/sparq-connection/logs/mcp-puppeteer-2025-07-07.log",
+            "hash": "23f75108b54231aa9bc8a056da0ec2143edd6b7839c87451d469ccb643a1ec54"
+        }
+    ],
+    "hashType": "sha256"
+}

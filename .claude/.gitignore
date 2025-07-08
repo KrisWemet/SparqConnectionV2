@@ -1,0 +1,13 @@
+# Claude Code Personal Settings
+# This file should be added to your main .gitignore as well
+settings.local.json
+notifications.log
+*.log
+
+# Personal hook outputs
+hook-outputs/
+personal-logs/
+
+# Temporary files
+*.tmp
+*.temp

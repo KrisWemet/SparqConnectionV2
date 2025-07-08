@@ -136,15 +136,27 @@ src/
 
 ### Required Environment Variables
 ```
+# Core Application
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 OPENAI_API_KEY=your_openai_api_key
+
+# MCP Servers (Optional but Recommended)
+DATABASE_URL=your_postgres_connection_string
+GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+BRAVE_SEARCH_API_KEY=your_brave_search_api_key
 ```
 
 ### Database Setup
 - Supabase project with provided schema
 - RLS policies must be enabled
 - Migrations located in `supabase/migrations/`
+
+### MCP Server Setup
+- Run `./.mcp/setup.sh` to install MCP packages
+- MCP configuration available in `.mcp/config.json`
+- Documentation in `.mcp/README.md`
+- Test with `npm run mcp:test`
 
 ## Key Patterns
 
@@ -171,6 +183,37 @@ Use encryption utilities for sensitive data:
 ```typescript
 import { encryptContent } from '@/lib/security/encryption';
 const encrypted = encryptContent(reflectionText);
+```
+
+## MCP Enhanced Capabilities
+
+### Available MCP Servers
+- **PostgreSQL MCP**: Advanced database operations and schema management
+- **Sequential Thinking MCP**: Enhanced AI reasoning for relationship guidance
+- **Puppeteer MCP**: Automated testing of critical user journeys
+- **Google Maps MCP**: Location-based crisis resources and therapist finder
+- **Brave Search MCP**: Finding relationship experts and therapy resources
+
+### MCP Usage Examples
+```typescript
+// Using PostgreSQL MCP for complex psychology queries
+await postgresql.query({
+  sql: `SELECT * FROM user_psychology_profiles WHERE attachment_style = $1`,
+  params: ['anxious']
+});
+
+// Using Sequential Thinking MCP for crisis assessment
+await sequentialThinking.analyze({
+  prompt: "Assess relationship crisis indicators",
+  context: userMessage
+});
+
+// Using Google Maps MCP for crisis resources
+await googleMaps.findNearby({
+  query: "crisis counseling centers",
+  location: userLocation,
+  radius: 25000
+});
 ```
 
 ## Testing Strategy
